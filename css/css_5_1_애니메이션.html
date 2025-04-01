@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 애니메이션 및 전환 효과</title>
+    <style>
+      /* 전환 효과 (Transition) */
+      button {
+        background: blue; /* 기본 배경색 */
+        color: white; /* 텍스트 색상 */
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease; /* 배경색 전환 효과 */
+      }
+      button:hover {
+        background: red; /* 마우스를 올렸을 때 배경색 변경 */
+      }
+
+      /* 애니메이션 정의 */
+      @keyframes fadeIn {
+        from {
+          opacity: 0; /* 시작 상태: 투명 */
+        }
+        to {
+          opacity: 1; /* 끝 상태: 불투명 */
+        }
+      }
+
+      /* 애니메이션 적용 */
+      .box {
+        width: 100px;
+        height: 100px;
+        background: lightblue;
+        margin: 20px auto;
+        animation: fadeIn 2s ease-in; /* 애니메이션 이름, 지속 시간, 속도 */
+      }
+
+      /* 버튼 스타일 */
+      .animate-btn {
+        padding: 20px 40px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      /* 버튼에 애니메이션 적용 */
+      .animate-btn:hover {
+        animation: scaleColorChange 2s infinite; /* 애니메이션 실행 */
+      }
+
+      /* 애니메이션 정의 */
+      @keyframes scaleColorChange {
+        0% {
+          transform: scale(1); /* 원래 크기 */
+          background-color: #4caf50; /* 원래 배경색 */
+        }
+        50% {
+          transform: scale(1.2); /* 20% 커짐 */
+          background-color: #ff5722; /* 색상 변경 */
+        }
+        100% {
+          transform: scale(1); /* 원래 크기로 돌아옴 */
+          background-color: #4caf50; /* 원래 배경색으로 돌아옴 */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 애니메이션 및 전환 효과</h1>
+
+    <!-- 전환 효과 -->
+    <button class="animate-btn">Hover Me</button>
+
+    <!-- 애니메이션 -->
+    <div class="box"></div>
+  </body>
+</html>

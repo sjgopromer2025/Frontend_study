@@ -1,0 +1,82 @@
+<!-- 이 파일은 HTML 목록 태그(<ul>, <ol>, <li>, <dl>)의 사용법과 예제를 설명합니다. -->
+
+<!-- 
+<ul>, <ol>, <li>, <dl>, <dt>, <dd> 태그에 사용할 수 있는 속성들:
+1. <ul>, <ol> 태그
+   - type: 목록 항목의 스타일을 지정합니다 (disc, circle, square, 1, A 등).
+   - start: <ol>에서 시작 번호를 지정합니다.
+   - reversed: <ol>에서 역순으로 번호를 매깁니다.
+2. <li> 태그
+   - value: <ol>에서 항목의 번호를 지정합니다.
+3. <dl>, <dt>, <dd> 태그
+   - global attributes (모든 HTML 요소에서 사용 가능)
+     - class, id, style, title, hidden, lang, dir, data-* 등.
+-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- 문서의 문자 인코딩과 뷰포트 설정 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>목록 태그</title>
+  </head>
+  <body>
+    <!-- 목록 태그의 설명과 예제 -->
+    <h1>목록 태그</h1>
+    <p>
+      목록은 <code>&lt;ul&gt;</code> (순서 없는 목록),
+      <code>&lt;ol&gt;</code> (순서 있는 목록), 또는
+      <code>&lt;dl&gt;</code> (정의 목록)과 <code>&lt;li&gt;</code>,
+      <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code> 태그로 구성됩니다.
+    </p>
+
+    <!-- 순서 없는 목록 예제 -->
+    <h2>순서 없는 목록</h2>
+    <ul>
+      <li>항목 1</li>
+      <li>항목 2</li>
+      <li>항목 3</li>
+    </ul>
+
+    <!-- 순서 있는 목록 예제 -->
+    <h2>순서 있는 목록</h2>
+    <ol>
+      <li>항목 1</li>
+      <li>항목 2</li>
+      <li>항목 3</li>
+    </ol>
+
+    <!-- 순서 있는 목록 예제 (값 지정) -->
+    <h2>순서 있는 목록 (값 지정)</h2>
+    <ol>
+      <li value="10">항목 1</li>
+      <li>항목 2</li>
+    </ol>
+
+    <!-- 정의 목록 예제 -->
+    <h2>정의 목록</h2>
+    <dl>
+      <dt>HTML</dt>
+      <dd>하이퍼텍스트 마크업 언어</dd>
+      <dt>CSS</dt>
+      <dd>스타일시트를 위한 언어</dd>
+      <dt>JavaScript</dt>
+      <dd>동적인 웹 페이지를 위한 프로그래밍 언어</dd>
+    </dl>
+  </body>
+</html>
+<!-- 
+1. <ul> 및 <ol>의 <li> 태그
+    value: <ol>에서만 사용 가능하며, 특정 항목의 번호를 설정합니다.
+    class: CSS 스타일링을 위한 클래스 이름.
+    id: 고유 식별자.
+    style: 인라인 스타일링.
+2. <dl>의 <dt> 및 <dd> 태그
+    class: CSS 스타일링을 위한 클래스 이름.
+    id: 고유 식별자.
+    style: 인라인 스타일링.
+3. 공통 속성
+    hidden: 요소를 숨깁니다.
+    title: 요소에 툴팁을 추가합니다.
+    data-*: 사용자 정의 데이터를 저장합니다.
+-->

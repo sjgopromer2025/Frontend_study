@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 실습 - 버튼 클릭 게임</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+      }
+      #score {
+        font-size: 24px;
+        margin: 20px 0;
+      }
+      #clickButton {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: lightblue;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #clickButton:hover {
+        background-color: deepskyblue;
+      }
+      #resetButton {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: lightcoral;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #resetButton:hover {
+        background-color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM 실습 - 버튼 클릭 게임</h1>
+    <p>버튼을 클릭하여 점수를 올려보세요!</p>
+    <div id="score">점수: 0</div>
+    <button id="clickButton">클릭!</button>
+    <button id="resetButton">리셋</button>
+
+    <script>
+      // 점수 변수
+      let 점수 = 0;
+
+      // DOM 요소 가져오기
+      const 점수표시 = document.getElementById("score");
+      const 클릭버튼 = document.getElementById("clickButton");
+      const 리셋버튼 = document.getElementById("resetButton");
+
+      // 클릭 버튼 이벤트 핸들러
+      클릭버튼.addEventListener("click", () => {
+        점수++;
+        점수표시.textContent = `점수: ${점수}`;
+      });
+
+      // 리셋 버튼 이벤트 핸들러
+      리셋버튼.addEventListener("click", () => {
+        점수 = 0;
+        점수표시.textContent = `점수: ${점수}`;
+      });
+    </script>
+  </body>
+</html>

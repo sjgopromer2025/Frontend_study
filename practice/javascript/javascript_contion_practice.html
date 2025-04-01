@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문 실습 - 게임 캐릭터 상태</title>
+    <script>
+      // 1. if 조건문
+      let 체력 = 80;
+      if (체력 > 50) {
+        console.log("캐릭터 상태: 건강합니다!");
+      }
+
+      // 2. if-else 조건문
+      let 마나 = 30;
+      if (마나 >= 50) {
+        console.log("마나가 충분합니다. 스킬을 사용할 수 있습니다!");
+      } else {
+        console.log("마나가 부족합니다. 마나를 회복하세요!");
+      }
+
+      // 3. if-else if-else 조건문
+      let 경험치 = 120;
+      if (경험치 >= 200) {
+        console.log("레벨 업! 축하합니다!");
+      } else if (경험치 >= 100) {
+        console.log("조금만 더 노력하세요! 레벨 업이 가까워요!");
+      } else {
+        console.log("경험치를 더 모아야 합니다.");
+      }
+
+      // 4. switch 조건문
+      let 무기 = "활";
+      switch (무기) {
+        case "검":
+          console.log("검을 사용하여 적을 베었습니다!");
+          break;
+        case "활":
+          console.log("활을 사용하여 적을 저격했습니다!");
+          break;
+        case "마법":
+          console.log("마법을 사용하여 적을 불태웠습니다!");
+          break;
+        default:
+          console.log("맨손으로 싸우고 있습니다!");
+      }
+
+      // 5. 삼항 연산자
+      let 방어구 = true;
+      let 방어구상태 = 방어구
+        ? "방어구가 장착되어 있습니다."
+        : "방어구가 없습니다. 위험합니다!";
+      console.log("삼항 연산자 결과:", 방어구상태);
+
+      // 6. 논리 연산자
+      let 적발견 = true;
+      let 무기장착 = false;
+
+      if (적발견 && 무기장착) {
+        console.log("적을 공격합니다!");
+      } else if (적발견 && !무기장착) {
+        console.log("무기가 없습니다! 도망치세요!");
+      } else {
+        console.log("주변에 적이 없습니다. 안전합니다.");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>조건문 실습 - 게임 캐릭터 상태</h1>
+    <p>콘솔을 열어 결과를 확인하세요!</p>
+
+    <!-- 조건문 기준 설명 -->
+    <h2>조건문 기준 설명</h2>
+    <ul>
+      <li>
+        <strong>if 조건문:</strong> 체력이 50 이상이면 "건강합니다!"를
+        출력합니다.
+      </li>
+      <li>
+        <strong>if-else 조건문:</strong> 마나가 50 이상이면 "스킬을 사용할 수
+        있습니다!"를 출력하고, 그렇지 않으면 "마나를 회복하세요!"를 출력합니다.
+      </li>
+      <li>
+        <strong>if-else if-else 조건문:</strong> 경험치에 따라 레벨 업 상태를
+        출력합니다.
+        <ul>
+          <li>200 이상: "레벨 업!"</li>
+          <li>100 이상: "조금만 더 노력하세요!"</li>
+          <li>그 외: "경험치를 더 모아야 합니다."</li>
+        </ul>
+      </li>
+      <li>
+        <strong>switch 조건문:</strong> 무기의 종류에 따라 다른 메시지를
+        출력합니다.
+        <ul>
+          <li>"검", "활", "마법"에 따라 다른 동작을 출력.</li>
+          <li>기본값(default)으로 "맨손으로 싸우고 있습니다!"를 출력.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>삼항 연산자:</strong> 방어구가 있으면 "방어구가 장착되어
+        있습니다."를 출력하고, 없으면 "방어구가 없습니다."를 출력합니다.
+      </li>
+      <li>
+        <strong>논리 연산자:</strong> AND(&&)와 NOT(!) 연산자를 사용하여 적 발견
+        여부와 무기 장착 상태를 평가합니다.
+        <ul>
+          <li>적이 있고 무기가 있으면 "적을 공격합니다!"를 출력.</li>
+          <li>적이 있지만 무기가 없으면 "도망치세요!"를 출력.</li>
+          <li>적이 없으면 "안전합니다."를 출력.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- 현재 게임 캐릭터 상태 -->
+    <h2>현재 게임 캐릭터 상태</h2>
+    <ul>
+      <li><strong>체력:</strong> 80 (건강합니다!)</li>
+      <li><strong>마나:</strong> 30 (마나가 부족합니다. 마나를 회복하세요!)</li>
+      <li>
+        <strong>경험치:</strong> 120 (조금만 더 노력하세요! 레벨 업이 가까워요!)
+      </li>
+      <li><strong>무기:</strong> 활 (활을 사용하여 적을 저격했습니다!)</li>
+      <li><strong>방어구:</strong> 방어구가 장착되어 있습니다.</li>
+      <li>
+        <strong>적 발견 여부:</strong> 적이 있지만 무기가 없습니다! 도망치세요!
+      </li>
+    </ul>
+  </body>
+</html>

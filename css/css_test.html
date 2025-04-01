@@ -1,0 +1,176 @@
+<!-- 4. CSS 프레임워크 -->
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css"
+/>
+<div class="container">
+  <h1 class="text-center">Bootstrap을 이용한 스타일링</h1>
+  <p class="text-primary">
+    이 문장은 Bootstrap을 사용하여 파란색으로 설정되었습니다.
+  </p>
+  <button class="btn btn-success">부트스트랩 버튼</button>
+</div>
+<!--
+    ✔ 장점: 미리 정의된 스타일과 컴포넌트를 사용하여 빠르게 디자인 가능
+    ✔ 단점: 프레임워크에 의존하게 되어 커스터마이징이 어려울 수 있음
+    -->
+<!-- 5. CSS 변수 -->
+
+<style>
+  :root {
+    --main-color: #3498db; /* 메인 색상 */
+    --font-size: 16px; /* 기본 글자 크기 */
+  }
+  body {
+    color: var(--main-color);
+    font-size: var(--font-size);
+  }
+</style>
+<p>이 문장은 CSS 변수를 사용하여 설정된 색상입니다.</p>
+<!--
+    ✔ 장점: 재사용 가능, 유지보수 용이
+    ✔ 단점: 브라우저 호환성 문제
+    -->
+<!-- 6. CSS 그리드 레이아웃 -->
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열 레이아웃 */
+    gap: 10px; /* 요소 간격 */
+  }
+  .grid-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+  }
+</style>
+<div class="grid-container">
+  <div class="grid-item">1</div>
+  <div class="grid-item">2</div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>
+</div>
+<!--
+    ✔ 장점: 복잡한 레이아웃을 쉽게 구성 가능
+    ✔ 단점: CSS 그리드에 대한 이해가 필요함
+    -->
+<!-- 7. CSS 애니메이션 -->
+<style>
+  .fade-in {
+    animation: fadeIn 2s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+<div class="fade-in">이 문장은 애니메이션 효과가 적용되었습니다.</div>
+<!--
+    ✔ 장점: 시각적으로 매력적인 효과 제공
+    ✔ 단점: 성능 저하 가능성, 복잡한 애니메이션은 코드가 길어질 수 있음
+    -->
+<!-- 8. CSS 미디어 쿼리 -->
+<style>
+  @media (max-width: 600px) {
+    body {
+      background-color: lightblue; /* 화면 너비가 600px 이하일 때 배경색 변경 */
+    }
+  }
+</style>
+<p>이 문장은 미디어 쿼리를 사용하여 반응형 디자인을 적용했습니다.</p>
+<!--
+    ✔ 장점: 다양한 화면 크기에 맞춰 디자인 가능
+    ✔ 단점: 복잡한 미디어 쿼리는 코드가 길어질 수 있음
+    -->
+<!-- 9. CSS 전처리기 (Sass) -->
+<!-- <style lang="scss">
+      $main-color: #3498db; /* 메인 색상 */
+      $font-size: 16px; /* 기본 글자 크기 */
+
+      body {
+        color: $main-color;
+        font-size: $font-size;
+      }
+      .container {
+        padding: 20px;
+        background-color: lighten($main-color, 40%); /* 메인 색상 밝게 */
+      }
+    </style>
+    <div class="container">이 문장은 Sass를 사용하여 설정된 색상입니다.</div> -->
+<!--
+    ✔ 장점: 변수, 중첩 규칙, 믹스인 등으로 코드 재사용 가능
+    ✔ 단점: 추가적인 빌드 과정 필요, 브라우저 호환성 문제
+    -->
+<!-- 10. CSS Flexbox -->
+<style>
+  .flex-container {
+    display: flex;
+    justify-content: space-between; /* 요소 간격 조정 */
+    align-items: center; /* 수직 정렬 */
+  }
+  .flex-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+  }
+</style>
+<div class="flex-container">
+  <div class="flex-item">1</div>
+  <div class="flex-item">2</div>
+  <div class="flex-item">3</div>
+  <div class="flex-item">4</div>
+  <div class="flex-item">5</div>
+  <div class="flex-item">6</div>
+</div>
+<!--
+    ✔ 장점: 복잡한 레이아웃을 쉽게 구성 가능
+    ✔ 단점: Flexbox에 대한 이해가 필요함
+    -->
+<!-- 11. CSS 그라디언트 -->
+<style>
+  .gradient-box {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(
+      to right,
+      #3498db,
+      #2ecc71
+    ); /* 그라디언트 배경 */
+  }
+</style>
+<div class="gradient-box">이 박스는 그라디언트 배경입니다.</div>
+<!--
+    ✔ 장점: 시각적으로 매력적인 배경 제공
+    ✔ 단점: 복잡한 그라디언트는 코드가 길어질 수 있음
+    -->
+<!-- 12. CSS 커스텀 속성 -->
+<style>
+  :root {
+    --main-bg-color: #3498db; /* 메인 배경 색상 */
+    --main-text-color: #fff; /* 메인 텍스트 색상 */
+  }
+  body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+  }
+  .custom-box {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    padding: 20px;
+    border-radius: 5px;
+  }
+</style>
+<div class="custom-box">
+  이 박스는 커스텀 속성을 사용하여 설정된 색상입니다.
+</div>
+<!--
+    ✔ 장점: 재사용 가능, 유지보수 용이
+    ✔ 단점: 브라우저 호환성 문제
+    -->

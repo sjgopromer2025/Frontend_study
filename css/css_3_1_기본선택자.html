@@ -1,0 +1,43 @@
+<!--
+*	모든 요소 선택	* { margin: 0; }
+태그명	특정 태그 선택	p { color: blue; }
+.클래스명	특정 클래스 선택	.title { font-size: 20px; }
+#아이디명	특정 ID 선택	#header { background: gray; }
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      /* 전체 선택자 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: green;
+      }
+      /* 태그 선택자 */
+      h1 {
+        color: red;
+      }
+
+      /* 클래스 선택자 */
+      .text {
+        font-size: 18px;
+      }
+
+      /* ID 선택자 */
+      #main {
+        width: 100%;
+      }
+    </style>
+    <h1>CSS 선택자 예제</h1>
+    <p class="text">이 문장은 클래스 선택자로 설정된 색상입니다.</p>
+    <p id="main">이 문장은 ID 선택자로 설정된 색상입니다.</p>
+    <p>이 문장은 기본 색상입니다.</p>
+  </body>
+</html>

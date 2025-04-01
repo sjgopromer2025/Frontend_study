@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 개념 총정리</title>
+
+    <!-- 내부 스타일 적용 -->
+    <style>
+      /* 전체 선택자: 모든 요소의 기본 여백 제거 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 태그 선택자: h1의 색상 및 정렬 지정 */
+      h1 {
+        color: blue; /* 글자 색상을 파란색으로 설정 */
+        text-align: center; /* 텍스트 가운데 정렬 */
+        margin: 20px 0;
+      }
+
+      /* 클래스 선택자: p 태그의 기본 스타일 지정 */
+      .description {
+        font-size: 18px; /* 글자 크기 */
+        color: gray; /* 글자 색상 */
+        text-align: center; /* 가운데 정렬 */
+      }
+
+      /* ID 선택자: 메인 컨테이너 스타일 */
+      #container {
+        width: 80%; /* 전체 너비의 80% */
+        margin: 0 auto; /* 가운데 정렬 */
+        padding: 20px;
+        border: 2px solid black; /* 테두리 추가 */
+        border-radius: 10px; /* 둥근 모서리 */
+        background-color: #f9f9f9; /* 배경색 */
+      }
+
+      /* 박스 모델 예제 */
+      .box {
+        width: 200px;
+        height: 100px;
+        padding: 10px; /* 안쪽 여백 */
+        border: 2px solid black; /* 테두리 */
+        margin: 20px auto; /* 상하 20px, 좌우 자동 정렬 */
+        text-align: center;
+        line-height: 100px;
+        background-color: lightgray;
+      }
+
+      /* 가상 클래스: 버튼 스타일 */
+      .btn {
+        display: block;
+        width: 150px;
+        padding: 10px;
+        margin: 20px auto;
+        background: blue;
+        color: white;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease; /* 배경색 변경 애니메이션 */
+      }
+
+      /* 마우스를 올렸을 때 색상 변경 */
+      .btn:hover {
+        background: red;
+      }
+
+      /* 가상 요소: 첫 글자 강조 */
+      p::first-letter {
+        font-size: 2em;
+        color: red;
+      }
+
+      /* Flexbox를 이용한 레이아웃 */
+      .flex-container {
+        display: flex;
+        justify-content: space-around; /* 요소 간격 조정 */
+        align-items: center; /* 수직 정렬 */
+        margin: 20px;
+      }
+
+      .flex-box {
+        width: 100px;
+        height: 100px;
+        background: skyblue;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      /* 반응형 웹 적용: 화면 너비가 600px 이하일 때 */
+      @media (max-width: 600px) {
+        body {
+          background-color: lightyellow;
+        }
+
+        .box {
+          width: 100%;
+          height: auto;
+          line-height: normal;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 헤딩 태그 예제 -->
+    <h1>CSS 개념 총정리</h1>
+    <p class="description">
+      CSS의 기본 문법과 스타일 적용 방법을 한눈에 살펴보세요.
+    </p>
+
+    <!-- 박스 모델 예제 -->
+    <div id="container">
+      <h2>📌 박스 모델 예제</h2>
+      <div class="box">박스 요소</div>
+    </div>
+
+    <!-- 버튼 예제 -->
+    <button class="btn">버튼 예제</button>
+
+    <!-- Flexbox 예제 -->
+    <div class="flex-container">
+      <div class="flex-box">1</div>
+      <div class="flex-box">2</div>
+      <div class="flex-box">3</div>
+    </div>
+  </body>
+</html>

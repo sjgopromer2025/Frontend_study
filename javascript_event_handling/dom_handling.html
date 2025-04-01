@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM 조작 예제</title>
+    <style>
+      #text {
+        color: blue;
+        font-size: 20px;
+      }
+      .button {
+        margin: 5px;
+        padding: 10px;
+        background-color: lightgray;
+        border: none;
+        cursor: pointer;
+      }
+      .button:hover {
+        background-color: gray;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM 조작 및 이벤트 처리</h1>
+    <p id="text">이것은 샘플 텍스트입니다.</p>
+    <button class="button" id="changeTextBtn">텍스트 변경</button>
+    <button class="button" id="changeColorBtn">색상 변경</button>
+    <button class="button" id="resetBtn">초기화</button>
+
+    <script>
+      // 요소 찾기
+      const textElement = document.getElementById("text");
+      const changeTextBtn = document.getElementById("changeTextBtn");
+      const changeColorBtn = document.getElementById("changeColorBtn");
+      const resetBtn = document.getElementById("resetBtn");
+
+      // 텍스트 내용 변경
+      changeTextBtn.addEventListener("click", () => {
+        textElement.textContent = "텍스트가 변경되었습니다!";
+      });
+
+      // 색상 변경
+      changeColorBtn.addEventListener("click", () => {
+        textElement.style.color = "red";
+      });
+
+      // 리셋
+      resetBtn.addEventListener("click", () => {
+        textElement.textContent = "이것은 샘플 텍스트입니다.";
+        textElement.style.color = "blue";
+      });
+    </script>
+  </body>
+</html>

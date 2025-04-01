@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+    <script>
+    
+
+
+      // 1. for 반복문
+      // 특정 횟수만큼 반복 실행
+      console.log("for 반복문 예제:");
+      for (let i = 0; i < 5; i++) {
+        console.log(`for 반복문 실행: ${i}`);
+      }
+
+
+
+
+
+      // 2. while 반복문
+      // 조건이 참인 동안 반복 실행
+      console.log("while 반복문 예제:");
+      let 카운트 = 0;
+      while (카운트 < 3) {
+        console.log(`while 반복문 카운트: ${카운트}`);
+        카운트++;
+      }
+
+      // 3. do-while 반복문
+      // 최소 한 번은 실행한 후 조건을 확인
+      console.log("do-while 반복문 예제:");
+      let 숫자 = 0;
+      do {
+        console.log(`do-while 반복문 숫자: ${숫자}`);
+        숫자++;
+      } while (숫자 < 2);
+
+      // 4. for...of 반복문
+      // 배열의 각 요소를 순회
+      console.log("for...of 반복문 예제:");
+      const 배열 = ["사과", "바나나", "체리"];
+      for (const 과일 of 배열) {
+        console.log(`과일: ${과일}`);
+      }
+
+      // 5. for...in 반복문
+      // 객체의 속성을 순회
+      console.log("for...in 반복문 예제:");
+      const 객체 = { 이름: "홍길동", 나이: 25, 직업: "개발자" };
+      for (const 키 in 객체) {
+        console.log(`${키}: ${객체[키]}`);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>반복문 예제</h1>
+    <p>콘솔을 열어 결과를 확인하세요!</p>
+
+    <!-- 반복문 설명 -->
+    <h2>반복문 설명</h2>
+    <ul>
+      <li>
+        <strong>for 반복문:</strong> 특정 횟수만큼 반복 실행합니다. 예: 0부터
+        4까지 출력.
+      </li>
+      <li>
+        <strong>while 반복문:</strong> 조건이 참인 동안 반복 실행합니다. 예:
+        카운트가 3보다 작을 때까지 출력.
+      </li>
+      <li>
+        <strong>do-while 반복문:</strong> 최소 한 번은 실행한 후 조건을
+        확인합니다. 예: 숫자가 2보다 작을 때까지 출력.
+      </li>
+      <li>
+        <strong>for...of 반복문:</strong> 배열의 각 요소를 순회합니다. 예: 과일
+        목록 출력.
+      </li>
+      <li>
+        <strong>for...in 반복문:</strong> 객체의 속성을 순회합니다. 예: 객체의
+        키와 값을 출력.
+      </li>
+    </ul>
+  </body>
+</html>

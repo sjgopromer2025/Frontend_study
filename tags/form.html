@@ -1,0 +1,113 @@
+<!-- 이 파일은 HTML 폼 태그(<form>, <input>, <button>)의 사용법과 예제를 설명합니다. -->
+
+<!-- 
+<form>, <input>, <button> 태그에 사용할 수 있는 속성들:
+1. <form> 태그
+   - action: 폼 데이터를 제출할 URL을 지정합니다.
+   - method: 폼 데이터를 제출하는 HTTP 메서드 (GET, POST 등).
+   - enctype: 폼 데이터의 인코딩 타입을 지정합니다.
+   - target: 폼 제출 결과를 표시할 창/탭을 지정합니다.
+2. <input> 태그
+   - type: 입력 필드의 유형을 지정합니다 (text, password, checkbox 등).
+   - name: 입력 필드의 이름을 지정합니다.
+   - value: 입력 필드의 초기값을 지정합니다.
+   - placeholder: 입력 필드에 힌트를 제공합니다.
+   - required: 필수 입력 필드로 설정합니다.
+   - disabled: 입력 필드를 비활성화합니다.
+   - readonly: 입력 필드를 읽기 전용으로 설정합니다.
+3. <button> 태그
+   - type: 버튼의 동작을 지정합니다 (submit, reset, button).
+   - disabled: 버튼을 비활성화합니다.
+4. global attributes (모든 HTML 요소에서 사용 가능)
+   - class, id, style, title, hidden, lang, dir, data-* 등.
+
+
+<select> 태그 속성:
+  - id: 요소를 고유하게 식별합니다.
+  - name: 폼 데이터 전송 시 서버에서 사용할 이름을 지정합니다.
+  - disabled: 드롭다운을 비활성화합니다.
+  - required: 필수 입력 필드로 설정합니다.
+  - multiple: 여러 개의 옵션을 선택할 수 있도록 설정합니다.
+<option> 태그 속성:
+  - value: 선택된 옵션의 값을 지정합니다.
+  - disabled: 특정 옵션을 선택할 수 없도록 설정합니다.
+  - selected: 기본적으로 선택된 상태로 설정합니다.
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- 문서의 문자 인코딩과 뷰포트 설정 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 태그</title>
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault(); // 폼 제출 방지
+
+        // 입력된 데이터 가져오기
+        const name = document.getElementById("name").value;
+        const gender =
+          document.querySelector('input[name="gender"]:checked')?.value ||
+          "선택 안 함";
+        const interests = Array.from(
+          document.querySelectorAll('input[name="interest"]:checked')
+        ).map((checkbox) => checkbox.value);
+        const country = document.getElementById("country").value;
+
+        // 결과를 alert로 표시
+        alert(
+          `이름: ${name}\n성별: ${gender}\n취미: ${
+            interests.join(", ") || "선택 안 함"
+          }\n국가: ${country || "선택 안 함"}`
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 폼 태그의 설명과 예제 -->
+    <h1>폼 태그</h1>
+    <p>
+      <code>&lt;form&gt;</code> 태그는 사용자로부터 데이터를 입력받는 폼을
+      정의합니다.
+    </p>
+    <!-- 폼 태그의 예제 -->
+    <!-- <form
+      onsubmit="handleSubmit(event)"
+      action="https://www.naver.com"
+      target="_blank"
+    > -->
+    <form onsubmit="handleSubmit(event)">
+      <label for="name">이름:</label>
+      <input type="text" id="name" name="name" />
+
+      <!-- 라디오 버튼 추가 -->
+      <p>성별:</p>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">남성</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">여성</label>
+
+      <!-- 체크박스 추가 -->
+      <p>취미:</p>
+      <input type="checkbox" id="sports" name="interest" value="sports" />
+      <label for="sports">스포츠</label>
+      <input type="checkbox" id="music" name="interest" value="music" />
+      <label for="music">음악</label>
+      <input type="checkbox" id="movies" name="interest" value="movies" />
+      <label for="movies">영화</label>
+
+      <!-- 드롭다운 메뉴 추가 -->
+      <p>국가:</p>
+      <select id="country" name="country">
+        <option value="" disabled selected>선택하세요</option>
+        <option value="kr">대한민국</option>
+        <option value="us">미국</option>
+        <option value="jp">일본</option>
+        <option value="cn">중국</option>
+      </select>
+
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>

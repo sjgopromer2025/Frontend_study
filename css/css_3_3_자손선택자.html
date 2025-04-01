@@ -1,0 +1,41 @@
+<!--
+*	모든 요소 선택	* { margin: 0; }
+태그명	특정 태그 선택	p { color: blue; }
+.클래스명	특정 클래스 선택	.title { font-size: 20px; }
+#아이디명	특정 ID 선택	#header { background: gray; }
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자손 선택자 예제</title>
+    <style>
+      /* 자손 선택자 */
+      div p {
+        color: blue; /* div 요소의 모든 자손 p 태그에 파란색 적용 */
+        font-size: 18px; /* 글자 크기 설정 */
+      }
+
+      section span {
+        color: red; /* section 요소의 모든 자손 span 태그에 빨간색 적용 */
+        font-weight: bold; /* 글자 굵게 설정 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>자손 선택자 예제</h1>
+
+    <div>
+      <p>이 문장은 div의 자손 p 태그입니다.</p>
+      <p>이 문장도 div의 자손 p 태그입니다.</p>
+    </div>
+
+    <section>
+      <p>이 문장은 section의 자손 p 태그입니다.</p>
+      <span>이 문장은 section의 자손 span 태그입니다.</span>
+    </section>
+
+    <p>이 문장은 div나 section의 자손이 아닙니다.</p>
+  </body>
+</html>

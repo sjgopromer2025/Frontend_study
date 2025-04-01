@@ -1,0 +1,41 @@
+<!-- 이 파일은 HTML 구성 요소 그룹화 태그(<div>, <span>)의 사용법과 예제를 설명합니다. -->
+
+<!-- 
+<div>, <span> 태그에 사용할 수 있는 속성들:
+1. global attributes (모든 HTML 요소에서 사용 가능)
+   - class: CSS 스타일링을 위한 클래스 이름.
+   - id: 고유 식별자.
+   - style: 인라인 스타일링.
+   - title: 요소에 툴팁을 추가합니다.
+   - hidden: 요소를 숨깁니다.
+   - lang: 요소의 언어를 설정합니다.
+   - dir: 텍스트 방향을 설정합니다 (ltr, rtl).
+   - data-*: 사용자 정의 데이터를 저장합니다.
+-->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- 문서의 문자 인코딩과 뷰포트 설정 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구성 요소 그룹화</title>
+  </head>
+  <body>
+    <!-- 구성 요소 그룹화 태그의 설명과 예제 -->
+    <h1>구성 요소 그룹화</h1>
+    <p>
+      <code>&lt;div&gt;</code>는 블록 요소를 그룹화하고,
+      <code>&lt;span&gt;</code>은 인라인 요소를 그룹화합니다.
+    </p>
+    <!-- <div> 태그의 예제 -->
+    <div style="border: 1px solid black; padding: 10px">
+      <p>이것은 <code>&lt;div&gt;</code> 블록입니다.</p>
+    </div>
+    <!-- <span> 태그의 예제 -->
+    <p>
+      이것은
+      <span style="color: red">인라인 <code>&lt;span&gt;</code> 요소</span
+      >입니다.
+    </p>
+  </body>
+</html>

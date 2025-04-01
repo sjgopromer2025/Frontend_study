@@ -1,0 +1,45 @@
+<!--
+*	모든 요소 선택	* { margin: 0; }
+태그명	특정 태그 선택	p { color: blue; }
+.클래스명	특정 클래스 선택	.title { font-size: 20px; }
+#아이디명	특정 ID 선택	#header { background: gray; }
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그룹 선택자 예제</title>
+    <style>
+      /* 그룹 선택자 */
+      h1,
+      h2,
+      p {
+        color: blue; /* 모든 h1, h2, p 태그에 파란색 적용 */
+        text-align: center; /* 텍스트를 가운데 정렬 */
+        margin: 10px 0; /* 위아래 여백 10px */
+      }
+
+      /* 다른 그룹 선택자 */
+      .box,
+      .container,
+      .item {
+        border: 2px solid black; /* 테두리 설정 */
+        padding: 10px; /* 내부 여백 */
+        margin: 10px; /* 외부 여백 */
+        background-color: lightgray; /* 배경색 설정 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>그룹 선택자 예제</h1>
+    <h2>이것은 h2 태그입니다.</h2>
+    <p class="text">이 문장은 클래스 선택자로 설정된 색상입니다.</p>
+    <p id="main">이 문장은 ID 선택자로 설정된 색상입니다.</p>
+    <p>이 문장은 기본 색상입니다.</p>
+
+    <div class="box">박스 1</div>
+    <div class="container">박스 2</div>
+    <div class="item">박스 3</div>
+  </body>
+</html>

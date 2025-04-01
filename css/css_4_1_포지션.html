@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Position 예제</title>
+    <style>
+      /* 기본 스타일 */
+      .box {
+        width: 150px;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        font-weight: bold;
+      }
+
+      /* 1. static (기본값) */
+      .static-box {
+        position: static; /* 기본 위치 */
+        background-color: lightblue;
+      }
+
+      /* 2. relative */
+      .relative-box {
+        position: relative; /* 상대 위치 */
+        top: 20px; /* 위에서 20px 이동 */
+        left: 20px; /* 왼쪽에서 20px 이동 */
+        background-color: lightgreen;
+      }
+
+      /* 3. absolute */
+      .absolute-box {
+        position: absolute; /* 절대 위치 */
+        top: 50px; /* 부모 기준 위에서 50px */
+        left: 50px; /* 부모 기준 왼쪽에서 50px */
+        background-color: lightcoral;
+      }
+
+      /* 4. fixed */
+      .fixed-box {
+        position: fixed; /* 고정 위치 */
+        bottom: 10px; /* 화면 하단에서 10px */
+        right: 10px; /* 화면 오른쪽에서 10px */
+        background-color: lightgoldenrodyellow;
+      }
+
+      /* 5. sticky */
+      .sticky-box {
+        position: sticky; /* 스크롤에 따라 고정 */
+        top: 0; /* 상단에 고정 */
+        background-color: lightpink;
+      }
+
+      /* 부모 컨테이너 */
+      .container {
+        position: relative; /* 자식 요소의 absolute 기준 */
+        height: 300px;
+        border: 2px dashed gray;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Position 예제</h1>
+
+    <!-- static -->
+    <div class="box static-box">Static</div>
+
+    <!-- relative -->
+    <div class="box relative-box">Relative</div>
+
+    <!-- absolute -->
+    <div class="container">
+      <div class="box absolute-box">Absolute</div>
+    </div>
+
+    <!-- fixed -->
+    <div class="box fixed-box">Fixed</div>
+
+    <!-- sticky -->
+    <div class="box sticky-box">Sticky</div>
+    <p>스크롤을 내려보세요. Sticky 박스는 상단에 고정됩니다.</p>
+    <p>이것은 추가 텍스트입니다. 스크롤을 테스트하기 위해 작성되었습니다.</p>
+    <p>이것은 추가 텍스트입니다. 스크롤을 테스트하기 위해 작성되었습니다.</p>
+    <p>이것은 추가 텍스트입니다. 스크롤을 테스트하기 위해 작성되었습니다.</p>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+    <!-- static -->
+    <div class="box static-box">Static</div>
+  </body>
+</html>

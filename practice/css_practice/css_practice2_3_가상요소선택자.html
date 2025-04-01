@@ -1,0 +1,50 @@
+<!--
+*	모든 요소 선택	* { margin: 0; }
+태그명	특정 태그 선택	p { color: blue; }
+.클래스명	특정 클래스 선택	.title { font-size: 20px; }
+#아이디명	특정 ID 선택	#header { background: gray; }
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상 요소 선택자 예제</title>
+    <style>
+      /* 가상 요소 선택자 예제 */
+
+      /* 1. ::before - 요소의 내용 앞에 추가 */
+      h1::before {
+        content: "🔥 "; /* 앞에 아이콘 추가 */
+        color: orange; /* 아이콘 색상 */
+      }
+
+      /* 2. ::after - 요소의 내용 뒤에 추가 */
+      h1::after {
+        content: " 🎉"; /* 뒤에 아이콘 추가 */
+        color: green; /* 아이콘 색상 */
+      }
+
+      /* 3. ::first-letter - 첫 글자 스타일링 */
+      p::first-letter {
+        font-size: 2em; /* 첫 글자 크기 증가 */
+        font-weight: bold; /* 첫 글자 굵게 */
+        color: blue; /* 첫 글자 색상 */
+      }
+
+      /* 4. ::first-line - 첫 줄 스타일링 */
+      p::first-line {
+        font-style: italic; /* 첫 줄 기울임 */
+        color: gray; /* 첫 줄 색상 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>가상 요소 선택자 예제</h1>
+
+    <p>
+      이 문장은 가상 요소 선택자 예제를 보여줍니다. 첫 글자와 첫 줄에 스타일이
+      적용됩니다.
+    </p>
+  </body>
+</html>

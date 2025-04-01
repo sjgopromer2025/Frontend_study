@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열과 객체</title>
+    <script>
+      // 배열 예제
+      let 과일들 = ["사과", "바나나", "체리"];
+      과일들.push("대추"); // 배열에 새로운 항목 추가
+      console.log("과일들:", 과일들[0]); // 첫 번째 과일 출력
+      console.log("과일들:", 과일들);
+
+      // 객체 예제
+      let 사람 = {
+        이름: "밥",
+        나이: 30,
+        인사: function () {
+          return `안녕하세요, 저는 ${this.이름}입니다.`;
+        },
+      };
+      console.log(사람.인사());
+    </script>
+  </head>
+  <body>
+    <h1>배열과 객체 예제</h1>
+  </body>
+</html>

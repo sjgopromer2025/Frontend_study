@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 처리</title>
+    <script>
+      // 버튼 클릭 시 실행되는 함수
+      function 버튼클릭() {
+        alert("버튼이 클릭되었습니다!");
+      }
+
+      // 마우스 오버 이벤트
+      function 마우스오버() {
+        console.log("마우스가 버튼 위에 있습니다!");
+      }
+
+      // 키보드 입력 이벤트
+      function 키보드입력(event) {
+        console.log(`입력된 키: ${event.key}`);
+      }
+
+      // DOMContentLoaded 이벤트로 이벤트 리스너 등록
+      document.addEventListener("DOMContentLoaded", () => {
+        // 클릭 이벤트 리스너
+        const clickButton = document.getElementById("clickButton");
+        clickButton.addEventListener("click", 버튼클릭);
+
+        // 마우스 오버 이벤트 핸들러 속성
+        const hoverButton = document.getElementById("hoverButton");
+        hoverButton.onmouseover = 마우스오버;
+
+        // 키보드 입력 이벤트 리스너
+        const inputField = document.getElementById("inputField");
+        inputField.addEventListener("keyup", 키보드입력);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>이벤트 처리 예제</h1>
+
+    <!-- 클릭 이벤트 -->
+    <button id="clickButton">클릭하세요</button>
+
+    <!-- 마우스 오버 이벤트 -->
+    <button id="hoverButton">마우스를 올려보세요</button>
+
+    <!-- 키보드 입력 이벤트 -->
+    <input id="inputField" type="text" placeholder="키를 입력하세요" />
+  </body>
+</html>

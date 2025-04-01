@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery 이벤트 핸들링 실습</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+      }
+      #colorBox {
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        background-color: lightgray;
+        border: 2px solid black;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+      }
+      #redButton {
+        background-color: lightcoral;
+      }
+      #redButton:hover {
+        background-color: crimson;
+      }
+      #blueButton {
+        background-color: lightblue;
+      }
+      #blueButton:hover {
+        background-color: deepskyblue;
+      }
+      #resetButton {
+        background-color: lightgreen;
+      }
+      #resetButton:hover {
+        background-color: limegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery 이벤트 핸들링 실습</h1>
+    <p>버튼을 클릭하여 박스의 배경색을 변경하세요!</p>
+    <div id="colorBox"></div>
+    <button id="redButton">빨간색</button>
+    <button id="blueButton">파란색</button>
+    <button id="resetButton">초기화</button>
+
+    <script>
+      $(document).ready(function () {
+        // 빨간색 버튼 클릭 이벤트
+        $("#redButton").click(function () {
+          $("#colorBox").css("background-color", "red");
+        });
+
+        // 파란색 버튼 클릭 이벤트
+        $("#blueButton").click(function () {
+          $("#colorBox").css("background-color", "blue");
+        });
+
+        // 초기화 버튼 클릭 이벤트
+        $("#resetButton").click(function () {
+          $("#colorBox").css("background-color", "lightgray");
+        });
+      });
+    </script>
+  </body>
+</html>

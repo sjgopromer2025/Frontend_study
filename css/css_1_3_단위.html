@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 단위 예제</title>
+    <style>
+      /* 1. px - 고정 크기 (절대 단위) */
+      .box-px {
+        width: 200px; /* 고정된 너비 */
+        height: 100px; /* 고정된 높이 */
+        background-color: #9286ea; /* HEX 배경 */
+        margin-bottom: 20px;
+      }
+
+      /* 2. % - 부모 요소 기준 크기 (상대 단위) */
+      .box-percent {
+        width: 50%; /* 부모 요소의 50% 너비 */
+        height: 100px;
+        background-color: lightgreen;
+        margin-bottom: 20px;
+      }
+
+      /* 3. em - 부모 요소의 글자 크기 기준 */
+      .box-em {
+        width: 20em; /* 부모 글자 크기의 20배 */
+        height: 10em; /* 부모 글자 크기의 10배 */
+        background-color: rgb(255, 204, 0); /* 주황색 배경 */
+        margin-bottom: 20px;
+      }
+
+      /* 4. rem - 최상위 <html> 요소 기준 */
+      .box-rem {
+        width: 20rem; /* 최상위 글자 크기의 20배 */
+        height: 10rem; /* 최상위 글자 크기의 10배 */
+        background-color: lightgoldenrodyellow;
+      }
+
+      /* 기본 글자 크기 설정 */
+      html {
+        font-size: 16px; /* 1rem = 16px */
+      }
+      body {
+        font-size: 14px; /* 1em = 14px */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS 단위 예제</h1>
+    <div class="box-px">px 단위 박스 (200px x 100px)</div>
+    <div class="box-percent">% 단위 박스 (부모의 50% 너비)</div>
+    <div class="box-em">em 단위 박스 (20em x 10em)</div>
+    <div class="box-rem">rem 단위 박스 (20rem x 10rem)</div>
+  </body>
+</html>

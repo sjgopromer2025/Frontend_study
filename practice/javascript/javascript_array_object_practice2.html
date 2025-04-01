@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트 배열과 객체 실습 - 쉬운 버전</title>
+    <script>
+      // 1. 캐릭터 정보 객체
+      const 캐릭터 = {
+        이름: "초보자",
+        레벨: 1,
+        직업: "모험가",
+        체력: 50,
+        인벤토리: ["나무검", "포션"],
+      };
+
+      // 캐릭터 정보 출력
+      console.log("캐릭터 정보:");
+      console.log(`이름: ${캐릭터.이름}`);
+      console.log(`레벨: ${캐릭터.레벨}`);
+      console.log(`직업: ${캐릭터.직업}`);
+      console.log(`체력: ${캐릭터.체력}`);
+      console.log(`인벤토리: ${캐릭터.인벤토리.join(", ")}`);
+
+      // 2. 아이템 추가 함수
+      function 아이템추가(아이템) {
+        캐릭터.인벤토리.push(아이템);
+        console.log(`${아이템}이(가) 추가되었습니다.`);
+      }
+      아이템추가("방패");
+
+      // 3. 레벨 업 함수
+      function 레벨업() {
+        캐릭터.레벨 += 1;
+        캐릭터.체력 += 10;
+        console.log("레벨 업! 새로운 캐릭터 정보:");
+        console.log(`레벨: ${캐릭터.레벨}`);
+        console.log(`체력: ${캐릭터.체력}`);
+      }
+      레벨업();
+
+      // 4. 인벤토리 확인 함수
+      function 인벤토리확인() {
+        console.log("현재 인벤토리:", 캐릭터.인벤토리.join(", "));
+      }
+      인벤토리확인();
+    </script>
+  </head>
+  <body>
+    <h1>자바스크립트 배열과 객체 실습 - 쉬운 버전</h1>
+    <p>콘솔을 열어 결과를 확인하세요!</p>
+
+    <!-- 실습 조건 설명 -->
+    <h2>실습 조건 설명</h2>
+    <ul>
+      <li>
+        <strong>캐릭터 정보 객체:</strong> 캐릭터의 이름, 레벨, 직업, 체력,
+        인벤토리를 포함합니다.
+      </li>
+      <li>
+        <strong>아이템 추가 함수:</strong> 새로운 아이템을 인벤토리에 추가합니다.
+      </li>
+      <li>
+        <strong>레벨 업 함수:</strong> 캐릭터의 레벨을 올리고 체력을 증가시킵니다.
+      </li>
+      <li>
+        <strong>인벤토리 확인 함수:</strong> 현재 인벤토리를 출력합니다.
+      </li>
+    </ul>
+
+    <!-- 현재 캐릭터 상태 -->
+    <h2>현재 캐릭터 상태</h2>
+    <ul>
+      <li><strong>이름:</strong> 초보자</li>
+      <li><strong>레벨:</strong> 2 (레벨 업 후)</li>
+      <li><strong>직업:</strong> 모험가</li>
+      <li><strong>체력:</strong> 60 (레벨 업 후)</li>
+      <li><strong>인벤토리:</strong> 나무검, 포션, 방패</li>
+    </ul>
+  </body>
+</html>

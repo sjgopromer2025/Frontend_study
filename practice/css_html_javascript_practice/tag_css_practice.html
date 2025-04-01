@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 및 게시판</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      form {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      button {
+        margin-top: 15px;
+        width: 100%;
+        padding: 10px;
+        background-color: blue;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>📌 회원가입</h2>
+    <form action="#" method="post">
+      <label for="name">이름:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">이메일:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">비밀번호:</label>
+      <input type="password" id="password" name="password" required />
+
+      <label>성별:</label>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">남성</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">여성</label>
+
+      <label>취미:</label>
+      <input type="checkbox" id="sports" name="hobby" value="sports" />
+      <label for="sports">운동</label>
+      <input type="checkbox" id="reading" name="hobby" value="reading" />
+      <label for="reading">독서</label>
+      <input type="checkbox" id="traveling" name="hobby" value="traveling" />
+      <label for="traveling">여행</label>
+
+      <label for="country">국가 선택:</label>
+      <select id="country" name="country">
+        <option value="korea">대한민국</option>
+        <option value="usa">미국</option>
+        <option value="japan">일본</option>
+      </select>
+
+      <button type="submit">회원가입</button>
+    </form>
+
+    <h2>📌 게시판</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>제목</th>
+          <th>작성자</th>
+          <th>작성일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>첫 번째 게시글</td>
+          <td>홍길동</td>
+          <td>2025-03-31</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>두 번째 게시글</td>
+          <td>김철수</td>
+          <td>2025-03-31</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

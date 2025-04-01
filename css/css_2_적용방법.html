@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1. 인라인 스타일 -->
+
+    <p style="color: red; font-size: 20px">이 문장은 빨간색입니다.</p>
+
+    <!-- 
+    ✔ 장점: 개별 요소에 빠르게 스타일 적용 가능
+    ✔ 단점: 유지보수가 어려움, 코드가 지저분해짐 
+    -->
+    <!-- 2. 내부 스타일 시트 -->
+
+    <style>
+      /* 내부 스타일 시트 */
+      p {
+        color: blue;
+        font-size: 18px;
+      }
+    </style>
+    <p>이 문장은 파란색입니다.</p>
+
+    <!--
+    ✔ 장점: HTML 문서 내에서 스타일을 관리 가능
+    ✔ 단점: 여러 페이지에 적용할 경우 중복 코드 발생
+    -->
+    <!-- 3. 외부 스타일 시트 -->
+
+    <link href="css_file/css_test.css" rel="stylesheet" type="text/css" />
+    <h1>이 문장은 외부 스타일 시트로 설정된 색상입니다.</h1>
+
+    <!--
+    ✔ 장점: 여러 페이지에서 동일한 스타일 적용 가능, 유지보수 용이
+    ✔ 단점: 외부 파일을 불러오는 시간이 필요함
+    -->
+  </body>
+</html>

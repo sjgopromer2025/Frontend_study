@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문 실습 - 게임 아이템 수집</title>
+    <script>
+      // 1. for 반복문: 아이템 수집
+      console.log("for 반복문 예제:");
+      for (let i = 1; i <= 5; i++) {
+        console.log(`아이템 ${i}을(를) 수집했습니다.`);
+      }
+
+      // 2. while 반복문: 체력 회복
+      console.log("while 반복문 예제:");
+      let 체력 = 0;
+      while (체력 < 100) {
+        체력 += 20;
+        console.log(`체력을 회복 중... 현재 체력: ${체력}`);
+      }
+
+      // 3. do-while 반복문: 보스 도전
+      console.log("do-while 반복문 예제:");
+      let 보스체력 = 50;
+      do {
+        console.log(`보스를 공격했습니다! 남은 체력: ${보스체력}`);
+        보스체력 -= 10;
+      } while (보스체력 > 0);
+      console.log("보스를 처치했습니다!");
+
+      // 4. for...of 반복문: 인벤토리 확인
+      console.log("for...of 반복문 예제:");
+      const 인벤토리 = ["검", "방패", "포션", "활"];
+      for (const 아이템 of 인벤토리) {
+        console.log(`인벤토리에 ${아이템}이(가) 있습니다.`);
+      }
+
+      // 5. for...in 반복문: 캐릭터 정보 출력
+      console.log("for...in 반복문 예제:");
+      const 캐릭터 = { 이름: "용사", 레벨: 10, 직업: "전사" };
+      for (const 속성 in 캐릭터) {
+        console.log(`${속성}: ${캐릭터[속성]}`);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>반복문 실습 - 게임 아이템 수집</h1>
+    <p>콘솔을 열어 결과를 확인하세요!</p>
+
+    <!-- 반복문 조건 설명 -->
+    <h2>반복문 조건 설명</h2>
+    <ul>
+      <li><strong>for 반복문:</strong> 아이템을 1부터 5까지 수집합니다.</li>
+      <li>
+        <strong>while 반복문:</strong> 체력이 100이 될 때까지 20씩 회복합니다.
+      </li>
+      <li>
+        <strong>do-while 반복문:</strong> 보스를 공격하여 체력이 0이 될 때까지
+        반복합니다.
+      </li>
+      <li>
+        <strong>for...of 반복문:</strong> 인벤토리의 모든 아이템을 출력합니다.
+      </li>
+      <li>
+        <strong>for...in 반복문:</strong> 캐릭터의 속성과 값을 출력합니다.
+      </li>
+    </ul>
+
+    <!-- 현재 게임 상태 -->
+    <h2>현재 게임 상태</h2>
+    <ul>
+      <li><strong>수집한 아이템:</strong> 검, 방패, 포션, 활</li>
+      <li><strong>현재 체력:</strong> 100</li>
+      <li><strong>보스 상태:</strong> 처치 완료</li>
+      <li><strong>캐릭터 정보:</strong> 이름: 용사, 레벨: 10, 직업: 전사</li>
+    </ul>
+  </body>
+</html>

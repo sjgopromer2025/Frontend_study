@@ -1,0 +1,71 @@
+<!--
+*	모든 요소 선택	* { margin: 0; }
+태그명	특정 태그 선택	p { color: blue; }
+.클래스명	특정 클래스 선택	.title { font-size: 20px; }
+#아이디명	특정 ID 선택	#header { background: gray; }
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상 선택자 예제</title>
+    <style>
+      /* 가상 선택자 예제 */
+
+      /* 1. :hover - 마우스를 올렸을 때 */
+      a:hover {
+        color: red; /* 링크 색상을 빨간색으로 변경 */
+        text-decoration: underline; /* 밑줄 추가 */
+      }
+
+      /* 2. :nth-child() - 특정 순서의 자식 요소 */
+      ul li:nth-child(odd) {
+        background-color: lightblue; /* 홀수 번째 항목 배경색 */
+      }
+      ul li:nth-child(even) {
+        background-color: lightgray; /* 짝수 번째 항목 배경색 */
+      }
+
+      /* 3. :first-child - 첫 번째 자식 요소 */
+      div p:first-child {
+        font-weight: bold; /* 첫 번째 p 태그를 굵게 */
+      }
+
+      /* 4. :last-child - 마지막 자식 요소 */
+      div p:last-child {
+        color: green; /* 마지막 p 태그를 초록색으로 */
+      }
+
+      /* 5. :focus - 포커스가 있을 때 */
+      input:focus {
+        border: 2px solid blue; /* 포커스 시 파란 테두리 */
+        outline: none; /* 기본 아웃라인 제거 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>가상 선택자 예제</h1>
+
+    <!-- :hover 예제 -->
+    <a href="#">마우스를 올려보세요</a>
+
+    <!-- :nth-child(), :first-child, :last-child 예제 -->
+    <ul>
+      <li>첫 번째 항목</li>
+      <li>두 번째 항목</li>
+      <li>세 번째 항목</li>
+      <li>네 번째 항목</li>
+    </ul>
+
+    <div>
+      <p>첫 번째 문장입니다.</p>
+      <p>중간 문장입니다.</p>
+      <p>마지막 문장입니다.</p>
+    </div>
+
+    <!-- :focus 예제 -->
+    <label for="name">이름:</label>
+    <input type="text" id="name" placeholder="여기에 입력하세요" />
+  </body>
+</html>

@@ -1,0 +1,44 @@
+/* 전체 문서 스타일 */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 20px;
+}
+
+/* 제목 스타일 */
+h1 {
+  color: darkblue;
+}
+
+/* 강조할 중요 단어 스타일 */
+.keyword {
+  color: darkred;
+  font-weight: bold;
+}
+
+/* 특별한 강조 단어 스타일 */
+.important {
+  color: darkgreen;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* 하이라이트 단어 */
+.highlight {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+/* 마법사가 말하는 특별한 문장 */
+.magic-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: purple;
+  text-shadow: 2px 2px 5px rgba(128, 0, 128, 0.5);
+}
