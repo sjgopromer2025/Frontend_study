@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판</title>
+    <link rel="stylesheet" href="board_style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      /* 기본 스타일 */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+
+      .board {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      #postList {
+        list-style: none;
+        padding: 0;
+      }
+
+      #postList li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        color: #555;
+      }
+
+      #postList li:last-child {
+        border-bottom: none;
+      }
+
+      #addPostBtn {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #addPostBtn:hover {
+        background-color: #0056b3;
+      }
+
+      /* 반응형 스타일 */
+      @media (max-width: 768px) {
+        .board {
+          padding: 15px;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        #addPostBtn {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .board {
+          padding: 10px;
+        }
+
+        h2 {
+          font-size: 18px;
+        }
+
+        #addPostBtn {
+          font-size: 12px;
+          padding: 6px 12px;
+        }
+
+        #postList li {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="board">
+      <h2>게시판</h2>
+      <ul id="postList"></ul>
+      <button id="addPostBtn">게시글 추가</button>
+    </div>
+    <script>
+      $(document).ready(function () {
+        let postCount = 0;
+
+        // 게시글 추가 버튼 클릭 이벤트
+        $("#addPostBtn").click(function () {
+          postCount++;
+          $("#postList").append(`<li>게시글 ${postCount}</li>`);
+        });
+      });
+    </script>
+  </body>
+</html>
