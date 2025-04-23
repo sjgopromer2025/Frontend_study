@@ -1,68 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS 속성 예제</title>
-    <style>
-      /* 1. 텍스트 관련 속성 */
-      .text-example {
-        color: red; /* 텍스트 색상 */
-        font-size: 16px; /* 글자 크기 */
-        font-weight: bold; /* 글자 굵기 */
-        font-style: italic; /* 글자 스타일 */
-        text-align: center; /* 텍스트 정렬 */
-        text-decoration: underline; /* 텍스트 장식 */
-      }
 
-      /* 2. 박스 모델 관련 속성 */
-      .box-example {
-        width: 100px; /* 너비 */
-        height: 100px; /* 높이 */
-        margin: 10px; /* 외부 여백 */
-        padding: 10px; /* 내부 여백 */
-        border: 1px solid black; /* 테두리 */
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS 속성 예제</title>
+  <style>
+    /* 1. 텍스트 관련 속성 */
+    .text-example {
+      color: red;
+      /* 텍스트 색상 */
+      font-size: 16px;
+      /* 글자 크기 */
+      font-weight: bold;
+      /* 글자 굵기 */
+      font-style: italic;
+      /* 글자 스타일 */
+      text-align: center;
+      /* 텍스트 정렬 */
+      text-decoration: underline;
+      /* 텍스트 장식 */
+    }
 
-      /* 3. 배경 관련 속성 */
-      .background-example {
-        background-color: yellow; /* 배경 색상 */
-        background-image: url("https://via.placeholder.com/100"); /* 배경 이미지 */
-        background-size: cover; /* 배경 크기 */
-        background-position: center; /* 배경 위치 */
-      }
+    /* 2. 박스 모델 관련 속성 */
+    .box-example {
+      width: 100px;
+      /* 너비 */
+      height: 100px;
+      /* 높이 */
+      margin: 10px;
+      /* 외부 여백 */
+      padding: 10px;
+      /* 내부 여백 */
+      border: 1px solid black;
+      /* 테두리 */
+    }
 
-      /* 4. 디스플레이 및 정렬 */
-      .flex-example {
-        display: flex; /* 디스플레이 유형 */
-        justify-content: center; /* 가로 정렬 */
-        align-items: center; /* 세로 정렬 */
-        position: absolute; /* 위치 지정 */
-        top: 50px; /* 위쪽 위치 */
-        left: 50px; /* 왼쪽 위치 */
-        width: 200px;
-        height: 200px;
-        border: 2px dashed blue;
-      }
+    /* 3. 배경 관련 속성 */
+    .background-example {
+      background-color: yellow;
+      /* 배경 색상 */
+      background-image: url("../tags/img_test.png");
+      /* 배경 이미지 */
+      background-size: cover;
+      /* 배경 크기 */
+      background-position: center;
+      /* 배경 위치 */
+    }
 
-      /* 5. 기타 */
-      .other-example {
-        cursor: pointer; /* 마우스 커서 */
-        opacity: 0.5; /* 투명도 */
-        z-index: 10; /* 쌓임 순서 */
-        position: relative;
-        background-color: lightblue;
-        padding: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1 class="text-example">텍스트 속성 예제</h1>
+    /* 4. 디스플레이 및 정렬 */
+    .flex-example {
+      display: flex;
+      /* 디스플레이 유형 */
+      justify-content: center;
+      /* 가로 정렬 */
+      align-items: center;
+      /* 세로 정렬 */
+      position: absolute;
+      /* 위치 지정 */
+      top: 50px;
+      /* 위쪽 위치 */
+      left: 50px;
+      /* 왼쪽 위치 */
+      width: 200px;
+      height: 200px;
+      border: 2px dashed blue;
+    }
 
-    <div class="box-example background-example">박스 모델 & 배경 속성</div>
+    /* 5. 기타 */
+    .other-example {
+      cursor: pointer;
+      /* 마우스 커서 */
+      opacity: 0.5;
+      /* 투명도 */
+      z-index: 10;
+      /* 쌓임 순서 */
+      position: relative;
+      background-color: lightblue;
+      padding: 20px;
+    }
+  </style>
+</head>
 
-    <div class="flex-example">
-      <div class="other-example">기타 속성</div>
-    </div>
-  </body>
+<body>
+  <h1 class="text-example">텍스트 속성 예제</h1>
+
+  <div class="box-example background-example">박스 모델 & 배경 속성</div>
+
+  <div class="flex-example">
+    <div class="other-example">기타 속성</div>
+  </div>
+</body>
+
 </html>
