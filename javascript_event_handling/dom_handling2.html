@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 이벤트 실습</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            background: lightgray;
+            margin: 10px;
+            line-height: 150px;
+            text-align: center;
+            font-weight: bold;
+            border: 2px solid gray;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="clickBtn">클릭 이벤트</button>
+    <input type="text" id="inputBox" placeholder="입력해보세요" />
+    <div class="box" id="hoverBox">마우스 올리기</div>
+    <div class="box" id="dblClickBox">더블클릭</div>
+    <div class="box" id="focusBox" tabindex="0">포커스 테스트</div>
+    <form id="sampleForm">
+        <input type="text" placeholder="폼 입력값" name="test" />
+        <button type="submit">전송</button>
+    </form>
+    <button id="btn">눌러보세요</button>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function (e) {
+            console.log("e.target은?", e.target); // <button id="btn">...</button>
+        });
+    </script>
+    <div id="menu">
+        <button data-menu="home">홈</button>
+        <button data-menu="about">소개</button>
+        <button data-menu="contact">연락</button>
+    </div>
+
+    <script>
+        document.getElementById("menu").addEventListener("click", function (e) {
+            console.log("눌린 버튼:", e.target.textContent); // 실제 클릭한 버튼
+            console.log("선택한 메뉴:", e.target.dataset.menu);
+        });
+    </script>
+
+    <script>
+        // 1. 클릭 이벤트
+        document.getElementById("clickBtn").addEventListener("click", function () {
+            alert("버튼이 클릭되었습니다!");
+        });
+
+        // 2. 입력 변화 이벤트 (input)
+        document.getElementById("inputBox").addEventListener("input", function (e) {
+            console.log("입력 중:", e.target.value);
+        });
+
+        // 3. 마우스 오버 (mouseenter) & 아웃 (mouseleave)
+        const hoverBox = document.getElementById("hoverBox");
+        hoverBox.addEventListener("mouseenter", () => {
+            hoverBox.style.backgroundColor = "orange";
+            hoverBox.textContent = "마우스 들어옴";
+        });
+        hoverBox.addEventListener("mouseleave", () => {
+            hoverBox.style.backgroundColor = "lightgray";
+            hoverBox.textContent = "마우스 나감";
+        });
+
+        // 4. 더블클릭 이벤트 (dblclick)
+        const dblClickBox = document.getElementById("dblClickBox");
+        dblClickBox.addEventListener("dblclick", () => {
+            dblClickBox.style.backgroundColor = "skyblue";
+            dblClickBox.textContent = "더블클릭됨!";
+        });
+
+        // 5. 포커스(focus), 블러(blur) 이벤트
+        const focusBox = document.getElementById("focusBox");
+        focusBox.addEventListener("focus", () => {
+            focusBox.style.border = "2px solid blue";
+            focusBox.textContent = "포커스됨!";
+        });
+        focusBox.addEventListener("blur", () => {
+            focusBox.style.border = "2px solid gray";
+            focusBox.textContent = "포커스 테스트";
+        });
+
+        // 6. 폼 제출 이벤트 (submit)
+        document.getElementById("sampleForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // 실제 제출 막기
+            console.log("폼 요소:", e.target);
+            let form = e.target
+            let formData = new FormData(form);
+            console.log("폼 데이터:", formData);
+            for (let [key, value] of formData.entries()) {
+                console.log(`${key}: ${value}`);
+            }
+            alert("폼이 전송되었습니다!");
+        });
+
+        // 7. 키보드 입력 이벤트 (keydown)
+        document.addEventListener("keydown", function (e) {
+            console.log(`눌린 키: ${e.key}`);
+        });
+
+        // 8. 윈도우 로딩 이벤트
+        window.addEventListener("load", function () {
+            console.log("페이지가 완전히 로드되었습니다!");
+        });
+    </script>
+
+</body>
+
+</html>
+
+<!-- | 이벤트 이름 | 설명 |
+| ------------------------------- | ------------------ |
+| `"click"` | 마우스를 클릭할 때 |
+| `"dblclick"` | 더블클릭할 때 |
+| `"input"` | 입력값이 변경될 때 |
+| `"keydown"` / `"keyup"` | 키보드를 눌렀을 때 / 뗐을 때 |
+| `"submit"` | 폼(form)이 전송될 때 |
+| `"mouseenter"` / `"mouseleave"` | 마우스가 올라갈 때 / 벗어날 때 |
+| `"focus"` / `"blur"` | 포커스 얻을 때 / 잃을 때 | -->
